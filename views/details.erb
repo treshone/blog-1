@@ -3,7 +3,7 @@
 <p>
 	<%= @row['content'] %>
 	<br />
-	Added at <%=  %>
+	Added at <%= @row['created_date'] %>
 </p>
 
 <br />
@@ -17,7 +17,7 @@
 	</p>	
 <% end %>
 <p>
-	<from action="/details/<%=  %>" method="POST" role="from">
+	<from action="/details/<%= @row['id'] %>" method="POST" role="from">
 		<textarea name="content" class="form-control" rows="1" placeholder="Type comment text here"></textarea>
 		<br />
 		<button type="submit" class="btn btn-primary">Add comment</button>
